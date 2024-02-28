@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,34 +18,12 @@
         <textarea id="quizDetail" placeholder="Enter Quiz Detail"></textarea>
 
         <div id="questionsContainer">
-            <div class="question">
-                <label for="question1">Question 1:</label>
-                <input type="text" id="question1" class="questionInput" placeholder="Enter Question">
-
-                <label for="option1">Option 1:</label>
-                <input type="text" id="option1" class="optionInput" placeholder="Enter Option 1">
-
-                <label for="option2">Option 2:</label>
-                <input type="text" id="option2" class="optionInput" placeholder="Enter Option 2">
-
-                <label for="option3">Option 3:</label>
-                <input type="text" id="option3" class="optionInput" placeholder="Enter Option 3">
-
-                <label for="option4">Option 4:</label>
-                <input type="text" id="option4" class="optionInput" placeholder="Enter Option 4">
-
-                <label for="correctAnswer">Correct Answer:</label>
-                <select id="correctAnswer">
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
-                    <option value="4">Option 4</option>
-                </select>
-            </div>
+            <!-- Questions will be dynamically added here -->
         </div>
 
         <button id="addQuestionBtn">Add New Question</button>
         <button id="submitQuizBtn">Submit Quiz</button>
+        <button id="createNewQuizBtn" style="display: none;">Create New Quiz</button>
     </div>
 
     <script src="quizcreatorscript.js"></script>
