@@ -27,7 +27,6 @@ body::before {
     color: rgb(130, 154, 193);
     position: relative;
     top:70px;
-    font-style: italic;
 }
 
 .main-heading {
@@ -38,7 +37,6 @@ body::before {
     color: rgb(130, 154, 193);
     position: relative;
     top: 140px;
-    font-style: italic;
     padding: 20px;
     width:500px;
     margin-left: 100px;
