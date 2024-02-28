@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    padding: 0;
+    height:830px;
+    font-family: 'Arial', sans-serif;
+    background-image: url(backg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0, 0.6); 
+    pointer-events: none;
+
+} 
+.heading{
+    text-align: center;
+    text-decoration: solid;
+    font-size: 60px;
+    color: rgb(130, 154, 193);
+    position: relative;
+    top:70px;
+    font-style: italic;
+}
+
+.main-heading {
+    top:40px;
+    display: inline-block;
+    text-align: left;
+    font-size: 20px;
+    color: rgb(130, 154, 193);
+    position: relative;
+    top: 140px;
+    font-style: italic;
+    padding: 20px;
+    width:500px;
+    margin-left: 100px;
+}
+
+.container {
+    top: 120px;
+    display: inline-block;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    margin-left: 290px;
+}
+
+.form-container {
+    
+    background-color: #b283c4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+label {
+    margin-top: 10px;
+    position: relative;
+}
+
+input {
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    position: relative;
+}
+
+button {
+    padding: 10px;
+    font-size: 1em;
+    background-color: #736cc1;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+button:hover {
+    background-color: #595e9b;
+    position: relative;
+}
+
+p {
+    margin-top: 15px;
+    position: relative;
+}
