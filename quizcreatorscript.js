@@ -1,7 +1,10 @@
+
+
 document.addEventListener("DOMContentLoaded", function() {
     const questionsContainer = document.getElementById("questionsContainer");
     const addQuestionBtn = document.getElementById("addQuestionBtn");
     const submitQuizBtn = document.getElementById("submitQuizBtn");
+    const createNewQuizBtn = document.getElementById("createNewQuizBtn");
     let questionCounter = 1;
 
     addQuestionBtn.addEventListener("click", function() {
@@ -11,7 +14,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     submitQuizBtn.addEventListener("click", function() {
         // Add logic to handle quiz submission
-        alert("Quiz Submitted!");
+        const uniqueUrl = generateUniqueUrl();
+        displayUniqueUrl(uniqueUrl);
+        hideButtons();
+    });
+
+    createNewQuizBtn.addEventListener("click", function() {
+        // Redirect to the quiz creator page
+        window.location.href = 'quizcreator.html';
     });
 
     function createQuestionElement(questionNumber) {
@@ -44,6 +54,35 @@ document.addEventListener("DOMContentLoaded", function() {
         `;
 
         questionsContainer.appendChild(questionDiv);
+    }
+    function generateUniqueUrl() {
+        // Add logic to generate a unique URL
+        // For simplicity, using a random number as an example
+        return `https://example.com/quiz/${Math.floor(Math.random() * 100000)}`;
+    }
+
+    function displayUniqueUrl(url) {
+        // Clear existing content in questionsContainer
+        questionsContainer.innerHTML = "";
+
+        // Create a div for displaying the unique URL
+        const urlDiv = document.createElement("div");
+        urlDiv.classList.add("unique-url");
+        urlDiv.textContent = `Your unique quiz URL: ${url}`;
+
+        // Append the div to questionsContainer
+        questionsContainer.appendChild(urlDiv);
+        createNewQuizBtn.style.display = "block"
+
+        // Display the URL in an alert when clicked
+        urlDiv.addEventListener("click", function() {
+            alert(`Quiz URL: ${url}`);
+        });
+    }
+    function hideButtons() {
+        // Hide addQuestionBtn and submitQuizBtn
+        addQuestionBtn.style.display = "none";
+        submitQuizBtn.style.display = "none";
     }
 
     // Initial question
